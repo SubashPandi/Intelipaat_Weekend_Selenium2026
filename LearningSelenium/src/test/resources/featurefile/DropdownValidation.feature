@@ -1,4 +1,4 @@
-Feature: To Validate Dropdown
+Feature: To Validate static Dropdown
   @Dropdownvalidation @course
   Scenario: Handle static Dropdown1
     Given User launch Example url navigate to currency Dropdown
