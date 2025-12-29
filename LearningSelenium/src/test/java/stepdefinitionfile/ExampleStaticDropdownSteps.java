@@ -50,7 +50,6 @@ public class ExampleStaticDropdownSteps {
         for(int i=0;i<optioncount;i++){
             String optionvalue = staticIDEElement.findElements(By.tagName("option")).get(i).getText();
             System.out.println(optionvalue);
-            System.out.println("Completed");
         }
     }
 }
