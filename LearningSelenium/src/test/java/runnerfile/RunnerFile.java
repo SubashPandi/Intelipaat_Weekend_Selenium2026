@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/featurefile/DropdownValidation.feature"},
-        glue = {"stepdefinitionfile"},
-        tags = "@SelectIDE"
+        features = {"src/test/resources/featurefile/SalesforeLogin.feature"},
+        glue = {"stepdefinitionfile"}
+        //tags = "@SelectIDE"
 )
 public class RunnerFile {
 
