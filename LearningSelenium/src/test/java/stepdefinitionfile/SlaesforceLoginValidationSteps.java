@@ -9,16 +9,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import reusable.BrowserCall;
 
 public class SlaesforceLoginValidationSteps {
-    WebDriver d = new ChromeDriver();
-    ChromeOptions options = new ChromeOptions();
+    WebDriver d;
 
     @Given("User launch browser and navigate to the login page")
     public void launchURL() {
-        options.addArguments("--remote-allow-origins=*");
-        d.manage().window().maximize();
-        d.get("https://login.salesforce.com/?locale=in");
+       d= BrowserCall.browserInvoc();
     }
 
     @When("User enter valid username {string} and valid password {string}")
