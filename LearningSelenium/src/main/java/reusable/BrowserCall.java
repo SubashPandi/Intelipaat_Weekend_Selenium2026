@@ -32,7 +32,7 @@ public class BrowserCall {
                     //("--provide enter valid browser--");
         }
         d.manage().window().maximize();
-        d.get(prob.getProperty("url"));
+        d.get(prob.getProperty("EYurl"));
         return d;
     }
 }
