@@ -11,11 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import reusable.BrowserCall;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class SlaesforceLoginValidationSteps {
     WebDriver d;
 
     @Given("User launch browser and navigate to the login page")
-    public void launchURL() {
+    public void launchURL() throws IOException, InterruptedException {
        d= BrowserCall.browserInvoc();
     }
 
