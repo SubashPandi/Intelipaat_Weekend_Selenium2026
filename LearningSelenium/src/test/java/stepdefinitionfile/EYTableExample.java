@@ -36,10 +36,15 @@ public class EYTableExample {
 
         }
 
-
     }
 
     @Then("Iterate Revenue table data")
     public void iterateRevenueTableData() {
+        WebElement tableTwo = d.findElement(By.cssSelector(".wikitable"));
+        int row = tableTwo.findElements(By.xpath("//table[@class='wikitable']//tr/td[5]")).size();
+        for (int i = 0; i < row; i++) {
+            String text = tableTwo.findElements(By.xpath("//table[@class='wikitable']//tr/td[5]")).get(i).getText();
+            System.out.println(text);
+        }
     }
 }
