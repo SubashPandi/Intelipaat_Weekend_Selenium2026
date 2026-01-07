@@ -1,4 +1,14 @@
 package pageobjects;
 
-public class Homepage {
+import org.openqa.selenium.By;
+import reusable.BrowserCall;
+
+import java.io.IOException;
+
+public class Homepage extends BrowserCall {
+    public static By navigateSignPage = By.id("nav-link-accountList");
+
+    public static void navigateSignInPage() throws IOException, InterruptedException {
+        d.findElement(navigateSignPage).click();
+    }
 }
