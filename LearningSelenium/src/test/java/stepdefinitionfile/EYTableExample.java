@@ -9,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import reusable.BrowserCall;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EYTableExample {
@@ -24,11 +26,17 @@ public class EYTableExample {
     public void extractDataFromTable() {
 
         WebElement eyTable = d.findElement(By.xpath("//table [@class ='infobox ib-company vcard']"));
-        int rowSize = eyTable.findElements(By.tagName("th")).size();
-        for (int i = 1; i < rowSize; i++) {
-            String headervalue = eyTable.findElements(By.tagName("th")).get(i).getText();
-            System.out.println(headervalue);
+        List<WebElement> th = eyTable.findElements(By.tagName("th"));
+        List<String> header = new ArrayList<String>();
+        for(WebElement e:th){
+            header.add(e.getText().trim());
         }
+        System.out.println(header);
+//        int rowSize = eyTable.findElements(By.tagName("th")).size();
+//        for (int i = 1; i < rowSize; i++) {
+//            String headervalue = eyTable.findElements(By.tagName("th")).get(i).getText();
+//            System.out.println(headervalue);
+//        }
         int columnSize = eyTable.findElements(By.tagName("td")).size();
         for (int j = 1; j < columnSize; j++) {
             String value = eyTable.findElements(By.tagName("td")).get(j).getText();
