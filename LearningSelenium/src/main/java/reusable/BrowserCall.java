@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class BrowserCall {
-    static WebDriver d;
-    static ChromeOptions options = new ChromeOptions();
+    public static WebDriver d;
+    public static ChromeOptions options = new ChromeOptions();
 
     public static WebDriver browserInvoc() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream("src/main/resources/Utility/Config.properties");
@@ -32,7 +32,7 @@ public class BrowserCall {
                     //("--provide enter valid browser--");
         }
         d.manage().window().maximize();
-        d.get(prob.getProperty("EYurl"));
+        d.get(prob.getProperty("AMurl"));
         return d;
     }
 }
