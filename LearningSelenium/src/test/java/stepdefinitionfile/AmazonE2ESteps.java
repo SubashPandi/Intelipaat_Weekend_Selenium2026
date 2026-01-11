@@ -14,7 +14,7 @@ public class AmazonE2ESteps {
     @Given("Launch Browser and navigate to signInpage")
     public void launchUrl() throws IOException, InterruptedException {
         BrowserCall.browserInvoc();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         Homepage.navigateSignInPage();
     }
 
