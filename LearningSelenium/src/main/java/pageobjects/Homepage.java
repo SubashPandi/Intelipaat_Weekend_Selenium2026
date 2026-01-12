@@ -9,6 +9,6 @@ public class Homepage extends BrowserCall {
     public static By navigateSignPage = By.id("nav-link-accountList");
 
     public static void navigateSignInPage() throws IOException, InterruptedException {
-        d.findElement(navigateSignPage).click();
+        getDriver().findElement(navigateSignPage).click();
     }
 }
