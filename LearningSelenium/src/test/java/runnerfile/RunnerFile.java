@@ -9,7 +9,10 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/featurefile/AmazonE2ETest.feature"},
         glue = {"stepdefinitionfile"},
         tags = "@TCID001",
-        plugin = {"pretty"}
+        plugin = {"pretty",
+        "html:target/htmlrepor.html",
+         "json:target/Jsonreport.json",
+          "junit:target/Xmlreport.xml"}
 )
 public class RunnerFile {
 

@@ -3,6 +3,7 @@ package stepdefinitionfile;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobjects.Homepage;
 import pageobjects.SignInPage;
@@ -29,5 +30,8 @@ public class AmazonE2ESteps {
     @Then("Validate user able to login")
     public void validateUserAbleToLogin() {
         System.out.println("--Invalid Access---");
+            String ExpectedErrormsg="Your password is incorrect";
+            String ActaulErrormsg= SignInPage.getErrorMessage();
+        Assert.assertEquals(ExpectedErrormsg,ActaulErrormsg);
     }
 }

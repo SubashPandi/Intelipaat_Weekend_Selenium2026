@@ -13,26 +13,40 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class BrowserCall {
-    public static WebDriver d;
+    //public static WebDriver d;
+
+    private static ThreadLocal<WebDriver> th = new ThreadLocal<>();
+    public static Properties prob;
     public static ChromeOptions options = new ChromeOptions();
 
     public static WebDriver browserInvoc() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream("src/main/resources/Utility/Config.properties");
-        Properties prob = new Properties();
+        prob = new Properties();
         prob.load(fis);
-        if (prob.getProperty("browser").equalsIgnoreCase("Edge")) {
-            d = new EdgeDriver();
-        } else if (prob.getProperty("browser").equalsIgnoreCase("Chrome")) {
-            d = new ChromeDriver();
-            options.addArguments("--remote-allow-origins=*");
-        } else if (prob.getProperty("browser").equalsIgnoreCase("Firefox")) {
-            d = new FirefoxDriver();
-        } else {
-            throw new InvalidArgumentException("--provide enter valid browser--");
-                    //("--provide enter valid browser--");
+
+        switch (prob.getProperty("browser").toLowerCase()) {
+            case ("chrome"):
+                th.set(new ChromeDriver());
+                options.addArguments("--remote-allow-origins=*");
+                break;
+            case ("edge"):
+                th.set(new EdgeDriver());
+                break;
+            case ("firefox"):
+
+                th.set(new FirefoxDriver());
+                break;
+            default:
+                throw new InvalidArgumentException("---Provide valid browser-----");
+
         }
-        d.manage().window().maximize();
-        d.get(prob.getProperty("AMurl"));
-        return d;
+        getDriver().navigate().to(prob.getProperty("AMurl"));
+        getDriver().navigate().refresh();
+        getDriver().manage().window().maximize();
+        return getDriver();
+    }
+    public static WebDriver getDriver() {
+        return th.get();
     }
 }
+
