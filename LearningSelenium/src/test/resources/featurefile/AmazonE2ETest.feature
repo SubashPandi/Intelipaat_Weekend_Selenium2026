@@ -8,5 +8,5 @@ Feature: Validate Amazon login page
 
   @TCID002
   Scenario: Validate search function
-    Given User search the specific product in search box as product "Electric cooker"
+    Given User search the specific product in search box as product
     Then Validate should display for the search result
