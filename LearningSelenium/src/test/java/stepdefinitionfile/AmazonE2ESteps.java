@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobjects.Homepage;
+import pageobjects.SearchResultPage;
 import pageobjects.SignInPage;
 import reusable.BrowserCall;
 
@@ -14,8 +15,8 @@ import java.io.IOException;
 public class AmazonE2ESteps {
     @Given("Launch Browser and navigate to signInpage")
     public void launchUrl() throws IOException, InterruptedException {
-        BrowserCall.browserInvoc();
-        Thread.sleep(4000);
+        //BrowserCall.browserInvoc();
+       // Thread.sleep(4000);
         Homepage.navigateSignInPage();
     }
 
@@ -33,5 +34,19 @@ public class AmazonE2ESteps {
             String ExpectedErrormsg="Your password is incorrect";
             String ActaulErrormsg= SignInPage.getErrorMessage();
         Assert.assertEquals(ExpectedErrormsg,ActaulErrormsg);
+    }
+
+    @Given("User search the specific product in search box as product {string}" )
+    public void lunchHomepage(String product) throws IOException, InterruptedException {
+        //BrowserCall.browserInvoc();
+        Homepage.searchKeyword(product);
+        Homepage.clickSearchButton();
+    }
+
+    @Then("Validate should display for the search result" )
+    public void validateSearchResult() {
+        String expectedsearchresult="Amazon.in : Electric cooker";
+        Assert.assertEquals(expectedsearchresult, SearchResultPage.getSearchTitle());
+
     }
 }
