@@ -8,11 +8,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/featurefile/AmazonE2ETest.feature"},
         glue = {"stepdefinitionfile"},
-        tags = "@TCID001",
+        tags = "@TCID002",
         plugin = {"pretty",
-        "html:target/htmlrepor.html",
+        "html:target/htmlreport.html",
          "json:target/Jsonreport.json",
-          "junit:target/Xmlreport.xml"}
+          "junit:target/Xmlreport.xml",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class RunnerFile {
 
