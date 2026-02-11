@@ -3,12 +3,14 @@ package stepdefinitionfile;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageobjects.Homepage;
 import pageobjects.SearchResultPage;
 import pageobjects.SignInPage;
 import reusable.BrowserCall;
+import reusable.ReadExcel;
 
 import java.io.IOException;
 
@@ -36,10 +38,10 @@ public class AmazonE2ESteps {
         Assert.assertEquals(ExpectedErrormsg,ActaulErrormsg);
     }
 
-    @Given("User search the specific product in search box as product {string}" )
-    public void lunchHomepage(String product) throws IOException, InterruptedException {
+    @Given("User search the specific product in search box as product" )
+    public void lunchHomepage() throws IOException, InterruptedException, InvalidFormatException {
         //BrowserCall.browserInvoc();
-        Homepage.searchKeyword(product);
+        Homepage.searchKeyword(ReadExcel.fetchFile("product",1,0 ));
         Homepage.clickSearchButton();
     }
 

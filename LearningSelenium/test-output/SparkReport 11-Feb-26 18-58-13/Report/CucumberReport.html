@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 11, 2026 05:12:45 pm</span></a>
+<a href="#"><span class="badge badge-primary">Feb 11, 2026 06:58:13 pm</span></a>
 </li>
 </ul>
 </div>
@@ -97,7 +97,7 @@
           <div class="test-detail">
             <p class="name">Validate Amazon login page</p>
             <p class="text-sm">
-              <span>5:12:46 pm</span> / <span>00:00:00:038</span>
+              <span>6:58:13 pm</span> / <span>00:00:40:380</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -106,9 +106,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Validate Amazon login page</h5>
-<span class='badge badge-success'>02.11.2026 5:12:46 pm</span>
-<span class='badge badge-danger'>02.11.2026 5:12:46 pm</span>
-<span class='badge badge-default'>00:00:00:038</span>
+<span class='badge badge-success'>02.11.2026 6:58:13 pm</span>
+<span class='badge badge-danger'>02.11.2026 6:58:53 pm</span>
+<span class='badge badge-default'>00:00:40:380</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -122,33 +122,58 @@
     <div class="card-header" role="tab">
       <div class="card-title">
         <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Validate search function</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step fail-bg" title="stepdefinitionfile.AmazonE2ESteps.lunchHomepage(java.lang.String)">
-                <span>Given User search the specific product in search box as product "Electric cooker"</span>
+              <div class="step pass-bg" title="stepdefinitionfile.AmazonE2ESteps.lunchHomepage()">
+                <span>Given User search the specific product in search box as product</span>
       <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because the return value of "pageobjects.Homepage.getDriver()" is null
-	at pageobjects.Homepage.searchKeyword(Homepage.java:18)
-	at stepdefinitionfile.AmazonE2ESteps.lunchHomepage(AmazonE2ESteps.java:42)
-	at ✽.User search the specific product in search box as product "Electric cooker"(file:///D:/JavaWorkings/GitSelenium_Code/Intelipaat_Weekend_Selenium2026/LearningSelenium/src/test/resources/featurefile/AmazonE2ETest.feature:11)
-</textarea>
-      
       </div>
               </div>
-              <div class="step fail-bg" title="AFTER_STEP">
+              <div class="step pass-bg" title="AFTER_STEP">
                 <span>stepdefinitionfile.Hooks.takeScrenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate search function
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
       <div>
-        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "stepdefinitionfile.Hooks.getDriver()" is null
-	at stepdefinitionfile.Hooks.takeScrenshot(Hooks.java:32)
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepdefinitionfile.AmazonE2ESteps.validateSearchResult()">
+                <span>Then Validate should display for the search result</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<Amazon.in : [Electric cooker]> but was:<Amazon.in : [Tv]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinitionfile.AmazonE2ESteps.validateSearchResult(AmazonE2ESteps.java:51)
+	at ✽.Validate should display for the search result(file:///D:/JavaWorkings/GitSelenium_Code/Intelipaat_Weekend_Selenium2026/LearningSelenium/src/test/resources/featurefile/AmazonE2ETest.feature:12)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="stepdefinitionfile.AmazonE2ESteps.validateSearchResult()">
-                <span>Then Validate should display for the search result</span>
-      <div>Step skipped
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>stepdefinitionfile.Hooks.takeScrenshot(io.cucumber.java.Scenario)</span>
+      <div>Validate search function
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
       </div>
               </div>
           </div>
@@ -177,15 +202,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.NullPointerException</p>
-<p class="duration text-sm">2 tests</p>
+<p class="name">org.junit.ComparisonFailure</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.NullPointerException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
+<h4>org.junit.ComparisonFailure</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -198,21 +223,11 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:12:46 pm</td>
+<td>18:58:53 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='4'>Given User search the specific product in search box as product "Electric cooker"</a>
+<a href="#" class="linked" test-id='1' id='8'>Then Validate should display for the search result</a>
 <div class="">
-<span class="badge badge-default">Validate Amazon login page.Validate search function.Given User search the specific product in search box as product "Electric cooker"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>17:12:46 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='5'>stepdefinitionfile.Hooks.takeScrenshot(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Validate Amazon login page.Validate search function.stepdefinitionfile.Hooks.takeScrenshot(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Validate Amazon login page.Validate search function.Then Validate should display for the search result</span>
 </div>
 </td>
 </tr>
@@ -260,7 +275,7 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:12:46 pm</td>
+<td>18:58:13 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Validate search function</a>
 <div class="">
@@ -285,13 +300,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 11, 2026 05:12:45 pm</h3>
+<h3>Feb 11, 2026 06:58:13 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 11, 2026 05:12:46 pm</h3>
+<h3>Feb 11, 2026 06:58:54 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -362,10 +377,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div><small data-tooltip='75%'><b>3</b> steps passed</small></div>
 <div>
-<small data-tooltip='66%'><b>2</b> steps failed,
-<b>1</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='25%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -381,7 +396,7 @@
 </div></div>
 <script>
 var timeline = {
-"Validate Amazon login page":0.038
+"Validate Amazon login page":40.38
 };
 </script>
 <div class="row">
@@ -418,10 +433,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 0,
-failGrandChild: 2,
+passGrandChild: 3,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 1,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
