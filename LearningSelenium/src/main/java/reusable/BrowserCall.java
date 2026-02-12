@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 public class BrowserCall {
@@ -40,9 +41,10 @@ public class BrowserCall {
                 throw new InvalidArgumentException("---Provide valid browser-----");
 
         }
-        getDriver().navigate().to(prob.getProperty("AMurl"));
+        getDriver().navigate().to(prob.getProperty("url"));
         getDriver().navigate().refresh();
         getDriver().manage().window().maximize();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
         return getDriver();
     }
     public static WebDriver getDriver() {
