@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="78.77" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-02-11T17:33:03.211288300Z">
+<testcase classname="Validate Amazon login page" name="Validate search function - #1.1" time="40.28">
+<system-out><![CDATA[
+Given User search the specific product in search box as product "Electric cooker".passed
+Then Validate should display for the search result..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Amazon login page" name="Validate search function - #1.2" time="38.287">
+<system-out><![CDATA[
+Given User search the specific product in search box as product "iphone"....passed
+Then Validate should display for the search result..........................passed
+]]></system-out>
+</testcase>
+</testsuite>
