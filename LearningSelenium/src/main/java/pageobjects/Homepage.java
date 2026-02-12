@@ -14,8 +14,7 @@ public class Homepage extends BrowserCall {
     }
 
     public static void searchKeyword(String product) throws InterruptedException {
-        Thread.sleep(10000);
-        getDriver().findElement(searchBox).sendKeys(product);
+                getDriver().findElement(searchBox).sendKeys(product);
     }
 
     public static void clickSearchButton(){

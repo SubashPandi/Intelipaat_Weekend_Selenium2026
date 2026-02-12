@@ -7,12 +7,17 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import reusable.BrowserCall;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 
 public class SlaesforceLoginValidationSteps {
     WebDriver d;
@@ -45,7 +50,12 @@ public class SlaesforceLoginValidationSteps {
 
     @When("User enter invalid username {string} and invalid password {string}")
     public void EnterInvalidUsernameAndInvalidPassword(String username, String password) {
-        d.findElement(By.id("username")).sendKeys(username);
+        WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(50));
+        wait.pollingEvery(Duration.ofSeconds(10));
+
+       WebElement e = d.findElement(By.id("username"));
+        wait.until(ExpectedConditions.visibilityOf(e));
+        e.sendKeys(username);
         d.findElement(By.name("pw")).sendKeys(password);
 
     }
