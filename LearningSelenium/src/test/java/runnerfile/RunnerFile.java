@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/featurefile/AmazonE2ETest.feature"},
         glue = {"stepdefinitionfile"},
-        tags = "@TCID002",
+        tags = "@TCID004",
         plugin = {"pretty",
         "html:target/htmlreport.html",
          "json:target/Jsonreport.json",

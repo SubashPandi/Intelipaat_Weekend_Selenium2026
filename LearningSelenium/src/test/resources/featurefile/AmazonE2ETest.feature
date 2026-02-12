@@ -10,3 +10,23 @@ Feature: Validate Amazon login page
   Scenario: Validate search function
     Given User search the specific product in search box as product
     Then Validate should display for the search result
+
+  @TCID003
+  Scenario Outline: Validate search function
+    Given User search the specific product in search box as product "<product>"
+    Then Validate should display for the search result "<ExpectedResult>"
+    Examples:
+      | product         | ExpectedResult              |
+      | Electric cooker | Amazon.in : Electric cooker |
+      | iphone          | Amazon.in : iphone          |
+
+
+  @TCID004
+  Scenario Outline: Validate search function
+    Given User search the specific product in search box as product "<product>"
+    Then Validate should display for the search result
+    Examples:
+      | product         |
+      | Electric cooker |
+      | iphone          |
+
