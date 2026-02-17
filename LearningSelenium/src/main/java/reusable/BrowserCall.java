@@ -41,7 +41,7 @@ public class BrowserCall {
                 throw new InvalidArgumentException("---Provide valid browser-----");
 
         }
-        getDriver().navigate().to(prob.getProperty("url"));
+        getDriver().navigate().to(prob.getProperty("AMurl"));
         getDriver().navigate().refresh();
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(7));

@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/featurefile/SalesforeLogin.feature"},
+        features = {"src/test/resources/featurefile/AmazonE2ETest.feature"},
         glue = {"stepdefinitionfile"},
-        tags = "@TC02",
+        tags = "@Window",
         plugin = {"pretty",
         "html:target/htmlreport.html",
          "json:target/Jsonreport.json",

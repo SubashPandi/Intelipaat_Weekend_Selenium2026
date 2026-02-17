@@ -3,7 +3,7 @@ Feature: Validate Amazon login page
   @TCID001
   Scenario: Validate sign in with username and password
     Given Launch Browser and navigate to signInpage
-    When Enter Username "8508532405" and password "subash12345"
+    When Enter Username "9876543210" and password "12345"
     Then Validate user able to login
 
   @TCID002
@@ -30,3 +30,15 @@ Feature: Validate Amazon login page
       | Electric cooker |
       | iphone          |
 
+
+  @Mouse
+
+  Scenario: Mouse Action
+    Given User Mouse hover and select babies wish list
+    Then User select Baby wish List
+
+    @Window
+
+    Scenario: Window handling
+      Given Open multiple windows
+      Then Switch to windows

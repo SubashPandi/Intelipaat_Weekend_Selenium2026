@@ -8,3 +8,4 @@ Feature: To Validate static Dropdown
     Given User launch Example url navigate to currency Dropdown
     When Select any of one IDE
     And Get count of values in dropdown
+
