@@ -20,7 +20,8 @@ public class Homepage extends BrowserCall {
         getDriver().findElement(searchBox).sendKeys(product);
     }
 
-    public static void clickSearchButton() {
+    public static void clickSearchButton()
+    {
         getDriver().findElement(searchButton).click();
     }
 
@@ -31,6 +32,7 @@ public class Homepage extends BrowserCall {
         hoverAction.moveToElement(hover).perform();
     }
     public static void babyList() {
+
         getDriver().findElement(By.linkText("Baby Wishlist")).click();
     }
 }
