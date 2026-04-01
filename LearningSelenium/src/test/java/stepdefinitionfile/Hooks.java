@@ -17,6 +17,7 @@ import java.io.IOException;
 
 public class Hooks extends BrowserCall {
     private static final Logger logger = LogManager.getLogger(Hooks.class);
+
     @Before(order = 1)
     public void setup() throws IOException, InterruptedException {
         System.out.println("Thread ID in Before: " + Thread.currentThread().getId());
@@ -27,6 +28,7 @@ public class Hooks extends BrowserCall {
 
     @Before(order = 0, value = "@TCID001")
     public void specificHooks() {
+
         System.out.println("--Scenario specific hook--");
     }
 
