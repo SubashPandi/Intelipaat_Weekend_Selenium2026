@@ -29,6 +29,7 @@ public class BrowserCall {
             case ("chrome"):
                 th.set(new ChromeDriver());
                 options.addArguments("--remote-allow-origins=*");
+                options.addArguments("--headless");
                 break;
             case ("edge"):
                 th.set(new EdgeDriver());
@@ -48,6 +49,7 @@ public class BrowserCall {
         return getDriver();
     }
     public static WebDriver getDriver() {
+
         return th.get();
     }
 }
